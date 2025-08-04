@@ -1,0 +1,53 @@
+Datatype:
+
+String - sentence, word , character
+Integer - whole number for example 1,2,3,4,5
+Float - decimal number for example 1.0, 2.5, 3.14
+Boolean - True or False
+
+Objects:
+
+List - a collection of items, e.g., [1, 2, 3], ["apple", "banana"]
+Dictionary
+Set/Tuple
+
+Conditional Operators:
+
+== - equal to
+!= - not equal to
+> - greater than
+< - less than
+>= - greater than or equal to
+<= - less than or equal to
+
+\n - new line character
+\t - horizontal tab character
+
+Common Python Modules:
+
+os - operating system
+sys - system
+re - regular expressions
+math - mathematical functions
+random - random number generation
+datetime - date and time manipulation
+json - javaScript Object Notation
+
+Different File Modes:
+
+r - read
+w - write
+a - append
+r+ - read and write
+w+ - read and write
+a+ - append and read
+rb - read binary
+wb - write binary
+ab - append binary
+
+STDIN and STDOUT:
+
+STDIN - standard input
+STDOUT - standard output
+
+https://app.reqres.in/
