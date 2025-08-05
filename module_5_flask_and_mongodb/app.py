@@ -61,5 +61,23 @@ def name1():
         return 'Sorry, you are too young to use this site.'
 
 
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    # name = request.args.get('name')
+
+# not good practice
+    # name = request.form.get('name')
+    # password = request.form.get('password')
+        
+    form_data = dict(request.form)
+    print(form_data)
+    return form_data
+
+    # print(request.args)
+    
+    # return 'Hello, '+ name + '!'
+
+
 if __name__ == '__main__':  #good practice to run app
     app.run(debug=True)  #debug=True look for the changes and apply changes too
