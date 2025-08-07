@@ -27,7 +27,7 @@ def submit():
 @app.route('/view')
 def view():
 
-    data = collection.find() #collection.find() returns entire collection or cursor, a cursor is basically a list of objects(dictionaries) 
+    data = collection.find() #collection.find() returns entire collection or cursor, a cursor is basically iteratable object but not exactly list similar to  list of objects(dictionaries) 
     # a collection is a list of JSON document which means that it's a list of dictionaries. 
     data = list(data) # making a python list
     
