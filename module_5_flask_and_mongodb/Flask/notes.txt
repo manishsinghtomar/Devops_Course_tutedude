@@ -5,4 +5,4 @@
 3. Graph databases - databases > nodes > edges  (Neo4j, ArangoDB)
 4. Key-Value databases - databases > Keys > Values (Redis, DynamoDB)
 
-5. Blob stores
+5. Blob stores - databases > blobs (binary large objects) (Amazon S3, Google Cloud Storage)
