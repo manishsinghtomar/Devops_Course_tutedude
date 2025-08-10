@@ -1,0 +1,56 @@
+Introduction to Devops 
+
+What is Devops
+Devops Main Objectives
+Devops and Software Development Life Cycle
+Continuous Integration & Continuous Delivery
+Continuous and Virtual Development
+Cloud Providers
+Scripting/Basic-dev
+Configuration Management Tools
+
+Dev ops
+
+Developer - Writes code
+Operations - Hosts, Deploys, Monitors,
+Maintains, and Scales the application
+
+Objectives: 
+
+Maintain the Code
+Deploy the Code
+Monitor the Code
+Scale the Code
+
+Containers:
+
+1. Team 
+2. Server - can be defined as a piece of hardware that is used to run a workload and that can be run by appropriate ppl it can be anyone .
+
+Server:
+
+1. Home - public IP
+2. Cloud Provider
+
+Cloud Provider:
+
+1. servers
+2. IP
+3. DNS 
+4. Databases
+5. Runtimes - they give you places to run your code directly instead of having servers. that's called serverless applications.
+
+AWS - Amazon Web Services
+Azure - Microsoft Azure
+GCP - Google Cloud 
+
+Scripting/Basic-dev:
+
+1. Bash - bourn again shell
+2. Python 
+
+Configuration Management Tools:
+
+1. Ansible
+2. Chef
+3. Nginx
