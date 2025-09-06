@@ -1,0 +1,44 @@
+Networking:
+
+DNS
+Ingress
+Nginx
+reverse proxy
+SSL
+SSH
+IPV4/IPV6
+Security Groups
+VPC
+
+Categories of AWS Services:
+
+Compute: infrastucture as a service (IaaS) - some sort of infrastucture upon which you can run your applications 
+
+EC2 - Elastic Compute Cloud
+Elastic Beanstalk
+Lambda
+Elastic Container Service (ECS)
+Elastic Container Registry (ECR)
+Elastic Kubernetes Service (EKS)
+
+Storage: object storage, block storage, file storage
+
+S3
+Elastic Block Store (EBS)
+Elastic File System (EFS)   
+Glacier
+
+
+Databases: relational, non-relational, in-memory
+
+RDS
+DynamoDB
+Redshift
+ElastiCache
+
+Stuff we have learned:
+
+AWS Overview
+AWS CLI
+AWS IAM
+
