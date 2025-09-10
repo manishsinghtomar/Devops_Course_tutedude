@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎬 MovieVerse</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #1f1f1f;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #ffb400;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ffb400;
+    }
+
+    input[type="text"] {
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      background: #222;
+      color: #fff;
+      font-size: 1rem;
+      width: 180px;
+      transition: box-shadow 0.2s;
+    }
+
+    input[type="text"]:focus {
+      box-shadow: 0 0 0 2px #ffb400;
+    }
+
+    .hero {
+      background: url('https://cdn.wallpapersafari.com/22/23/wcAYlV.jpg') center/cover no-repeat;
+      padding: 6rem 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      background: rgba(30,30,30,0.3);
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+      display: inline-block;
+    }
+
+    .hero h2 {
+      font-size: 2.7rem;
+      margin-bottom: 0.5rem;
+      color: #ffb400;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #fff;
+      margin: 0;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.2rem;
+      padding: 2rem;
+    }
+
+    .movie-card {
+      background-color: #232323;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 24px rgba(255,180,0,0.15);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-bottom: 2px solid #ffb400;
+    }
+
+    .movie-card h3 {
+      margin: 0.7rem 0.5rem 0.2rem;
+      font-size: 1.1rem;
+      color: #ffb400;
+    }
+
+    .movie-card p {
+      margin: 0 0.5rem 0.7rem;
+      font-size: 0.95rem;
+      color: #aaa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🎥 MovieVerse</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Genres</a></li>
+        <li><a href="#">Top Rated</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <input type="text" placeholder="Search movies..." />
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Spider-Man: Homecoming</h2>
+      <p>Superhero | Fantasy | 2017</p>
+    </div>
+  </section>
+
+  <section class="movie-grid">
+    <div class="movie-card">
+      <img src="https://wallpapercave.com/wp/wp1867334.jpg" alt="John Wick" />
+      <h3>John Wick</h3>
+      <p>⭐ 8.5 | Action</p>
+    </div>
+    <div class="movie-card">
+      <img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SY679_.jpg" alt="Inception" />
+      <h3>Inception</h3>
+      <p>⭐ 8.8 | Sci-Fi</p>
+    </div>
+    <div class="movie-card">
+      <img src="https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SY679_.jpg" alt="Interstellar" />
+      <h3>Interstellar</h3>
+      <p>⭐ 8.6 | Adventure</p>
+    </div>
+    <div class="movie-card">
+      <img src="https://i.pinimg.com/236x/b7/c8/1a/b7c81aaf567216bb249e994d0df03c45.jpg" alt="The Dark Knight" />
+      <h3>The Dark Knight</h3>
+      <p>⭐ 9.0 | Action</p>
+    </div>
+    <div class="movie-card">
+      <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="Avengers Endgame" />
+      <h3>Avengers: Endgame</h3>
+      <p>⭐ 8.4 | Action</p>
+    </div>
+    <div class="movie-card">
+      <img src="https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg" alt="Pulp Fiction" />
+      <h3>Pulp Fiction</h3>
+      <p>⭐ 8.9 | Crime</p>
+    </div>
+    <div class="movie-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_4QIAFckt_xyalsTvRHptsM3xTIuGpYjHrVluZIj9k1PyXlNk" alt="Black Panther" />
+      <h3>Black Panther</h3>
+      <p>⭐ 7.3 | Action</p>
+    </div>
+    <div class="movie-card">
+      <img src="https://m.media-amazon.com/images/I/51EG732BV3L._AC_SY679_.jpg" alt="The Matrix" />
+      <h3>The Matrix</h3>
+      <p>⭐ 8.7 | Sci-Fi</p>
+    </div>
+  
+    <div class="movie-card">
+      <img src="https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_FMjpg_UX1000_.jpg" alt="Spider-Man" />
+      <h3>Spider-Man: No Way Home</h3>
+      <p>⭐ 8.2 | Action</p>
+    </div>
+ 
+  </section>
+
+  <footer>
+    &copy; 2025 MovieVerse. All rights reserved.
+  </footer>
+</body>
+</html>
