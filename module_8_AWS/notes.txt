@@ -41,4 +41,109 @@ Stuff we have learned:
 AWS Overview
 AWS CLI
 AWS IAM
+AWS S3
+AWS SDK for Python (Boto3)
+AWS Param Store
+AWS Cloudshell
+AWS EC2
+Networking
+AWS ECS ECR
+
+AWS  S3: Simple Storage Service
+
+1. Storage Limits
+2. Public Urls
+3. Progammatic Access
+
+AWS PARAM STORE: Securely store and retrieve parameters
+
+AWS CLOUDSHELL: Cloud-based shell environment for AWS
+
+AWS EC2: Elastic Compute Cloud 
+
+Resource Nomenclature:
+    vCPU
+    Memory
+
+ssh -i "course-manish.pem" ubuntu@13.232.110.92
+
+code from local to server:
+
+1. scp -i "course-manish.pem" ./backend ubuntu@13.232.110.92:~/backend
+2. git private
+
+(1.) using scp in local machine terminal
+--> scp -i "course-manish.pem" -r /d/WRITTEN_CODE/Devops_course_tutedude/module_7_docker/ares/backend ubuntu@52.66.77.248:~/backend
+
+(2.) using  git clone in server terminal
+git clone https://github.com/manishsinghtomar/Tutedude_Assignment.git
+
+DNS: Domain Name System
+    - translates domain names to IP addresses
+    - makes it easier for humans to access websites
+Ingress - Reverse Proxy 
+
+    Nginx
+    Apache
+    Traefik
+
+NGINX 
+
+http://localhost:443/api/v1/products
+
+localhost:443
+
+localhost
+
+server {
+       listen 80;
+       listen [::]:80;
+
+       server_name altair.com;
+
+       root /var/www/example.com;
+       index index.html;
+
+       location / {
+               proxy_pass http://localhost:8000;
+       }
+}
+
+SSL TLS : HTTPS
+
+AWS ECR: Elastic Container Registry
+
+AWS ECS: Elastic Container Service
+
+cluster >> Service >> task >> Container
+
+AWS Elastic Beanstalk: Platform as a Service (PaaS)
+
+IAAS : EC2
+PAAS : Elastic Beanstalk
+SAAS : RDS
+
+bare requirements of an app:
+1. System - os, cpu, memory
+2. Runtime - python, nodejs, java
+3. web server - nginx, apache
+4. requirements.txt
+
+EC2, ELB, SG, Cloudwatch, listerner, web server - nginx, python 3.8, requirements.txt - flask.
+
+wsgi - web server gateway interface
+gunicorn - web server
+
+AWS Lambda: Serverless Computing
+
+Database types:
+
+1. SQL  = relational
+2. NoSQL = document
+3. Graph = graph
+4. Key Value = key value
+5. Blob = binary large object (collection of files and folders)
+
+AWS RDS - Relational Database Service
+postgresql
 

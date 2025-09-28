@@ -1,0 +1,121 @@
+
+Sample DB:
+  dbname   : pgtestdb
+  username : postgres
+  password : BN-GUAH9eWHb!
+  end point: pg-test-db.ccforlwma7t3.ca-central-1.rds.amazonaws.com
+  port     : 5432
+
+https://www.postgresqltutorial.com/postgresql-create-table/
+
+Docker:
+docker run --name pg11 -e POSTGRES_PASSWORD=root -d -p 5432:5432 postgres
+docker exec-it pg11 bash
+
+docker start pg11
+
+psql -h 0.0.0.0 -p 5432 -U postgres
+
+psql -h 127.0.0.1 -p 5432 -U postgres
+
+docker exec -it kwikee_postgres_1 psql -U kwikee
+
+psql -h 165.225.36.90 -p 5432 -U postgres
+
+psql -h 120.0.0.1 -p 5432 -U postgres
+
+psql -h localhost -p 5432 -U postgres
+
+172.17.0.3
+psgl 172.17.0.3 -p 5432 -U postgres
+psgl postgresql://postgres:root@localhost:5432/postgres
+
+#
+show databases 
+\l
+
+#
+show size of the database
+\l+
+
+#
+show roles
+\du
+
+#
+switch database
+\c db_name
+
+#
+list tables in the database
+\dt
+
+#
+show schema table
+\dt+
+
+#
+show specific schema tables
+\dt schema_name.*
+
+#
+specific tble
+\d table name
+
+
+
+#
+select
+  *
+from
+  pg_catalog.pg_tables
+where
+  schemaname != 'my_schema_name'
+  and schemaname != 'pg_catalog':
+
+
+#
+Get current database
+SELECT current_database();
+
+or
+\c
+
+ог
+
+SELECT * FROM current_catalog;
+
+#
+quit database
+\q
+
+
+#
+Create DB
+CREATE DATABASE rjdbtest;
+GRANT CONNECT ON DATABASE rjdbtest TO kwikee;
+  https://www.digitalocean.com/docs/databases/postgresql/how-to/modify-user-privileges/
+
+
+#
+Connect to DB
+\c rjdbtest;
+
+CREATE TABLE CITY (
+  ID serial PRIMARY KEY,
+  NAME VARCHAR (50) UNIQUE NOT NULL,
+  STATE VARCHAR (50) NOT NULL,
+  COUNTRY VARCHAR (100) NOT NULL,
+  CREATED_AT TIMESTAMP NOT NULL,
+);
+
+CREATE TABLE CITY (
+  NAME VARCHAR (50),
+  age INTEGER
+);
+
+INSERT INTO CITY (NAME, STATE, COUNTRY, CREATED AT) VALUES ('Toronto', 'Ontario', 'Canada', NOW());
+INSERT INTO CITY (NAME, STATE, COUNTRY, CREATED_AT) VALUES ('Montreal', 'Quebec', 'Canada', NOW());
+
+DELETE FROM CITY;
+DROP TABLE CITY;
