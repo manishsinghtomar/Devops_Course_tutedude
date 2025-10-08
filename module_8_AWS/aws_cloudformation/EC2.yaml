@@ -1,0 +1,60 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: EC2 Instance
+
+Parameters:
+  ImageId:
+    Type: String
+    Description: AMI ID of the EC2 instance
+    Default: ami-06984ea821ac0a879
+
+Resources:
+  manishec2:
+    Type: AWS::EC2::Instance
+    Properties:
+      KeyName: course-manish
+      ImageId: !Ref ImageId
+      InstanceType: t2.micro
+      Monitoring: false
+      SecurityGroupIds: 
+        # - sg-06bc256ae3fddcf6b
+        !Ref manishsg
+      Tags:
+        - Key: course
+          Value: cloudformation-ec2
+  manishsg:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: manishsg
+      GroupDescription: just another security group 
+      VpcId: vpc-0475e670467e9c4cb
+      SecurityGroupIngress : 
+        - IpProtocol : tcp
+          FromPort : 22
+          ToPort : 22
+          CidrIp : 0.0.0.0/0 
+        - IpProtocol : tcp
+          FromPort : 80
+          ToPort : 80
+          CidrIp : 0.0.0.0/0
+      SecurityGroupEgress : 
+        - IpProtocol : tcp
+          FromPort : 80
+          ToPort : 80
+          CidrIp : 0.0.0.0/0
+      Tags:
+        - Key: AWS-cloudformation
+          Value: cloudformation-ec2
+
+Outputs:
+  InstanceId:
+    Description: ID of the EC2 instance
+    Value: !Ref manishec2
+  PublicIP:
+    Description: Public IP of the EC2 instance
+    Value: !GetAtt manishec2.PublicIp
+
+
+# we have created a new security group we just need to reference the security group right above instead of using pre built one
+# we are just creating a security group in the this stack and using the same security group same stack and referencing it while creating our EC2 instance  
+
+# ssh - i "course-manish.pem  ubuntu@<outputip>"

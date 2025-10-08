@@ -147,3 +147,42 @@ Database types:
 AWS RDS - Relational Database Service
 postgresql
 
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - echo Installing dependencies...
+  pre build:
+    commands:
+      - echo Entered the pre_build phase...
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started
+      - grep -Fq "yolo" index.html
+    finally:
+      - echo This always runs even if the install command fails
+  post build:
+    commands:
+      - echo Entered the post build phase...
+      - echo Build completed
+
+CodeCommit = git
+CodeBuild = CI
+CodeDeploy = CD
+CodePipeline = CI/CD
+
+Host git-codecommit.*.amazonaws.com
+User Your-IAM-SSH-key-ID-here
+IdentityFile ~/.ssh/your-private-key-filename-here 
+
+ECS CLOUDFORMATION:
+
+1. cluster
+2. task definition
+3. service
+4. ECR repository
+5. IAM roles
+6. Security Groups

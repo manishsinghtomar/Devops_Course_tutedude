@@ -13,7 +13,7 @@ Parameters:
 
 Resources:
   s3Bucket:
-    Type: AWS::S3:: Bucket
+    Type: AWS::S3::Bucket
     Properties:
       BucketName: Ref BucketName
       Tags:
@@ -23,8 +23,8 @@ Resources:
 Outputs:
   ARN:
     Description: Name of the S3 bucket
-    Value: GetAtt s3Bucket.Arn
+    Value: !GetAtt s3Bucket.Arn
 
   WebsiteURL:
     Description: URL for website hosted on $3
-    Value: IGetAtt s3Bucket.WebsiteURL
+    Value: !GetAtt s3Bucket.WebsiteURL
