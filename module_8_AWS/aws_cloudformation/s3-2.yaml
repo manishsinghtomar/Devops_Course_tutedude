@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: S3 Bucket
+
+Parameters:
+  BucketName:
+    Type: String
+    Description: Name of the S3 bucket
+    Default: s3-cloudformation-tutedude
+  TagValue:
+    Type: Number
+    Description: Value of the tag
+    Default: 50
+
+Resources:
+  s3Bucket:
+    Type: AWS::S3:: Bucket
+    Properties:
+      BucketName: Ref BucketName
+      Tags:
+        - Key: course
+          Value: IRef TagValue
+
+Outputs:
+  ARN:
+    Description: Name of the S3 bucket
+    Value: GetAtt s3Bucket.Arn
+
+  WebsiteURL:
+    Description: URL for website hosted on $3
+    Value: IGetAtt s3Bucket.WebsiteURL

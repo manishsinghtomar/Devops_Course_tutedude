@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: S3 Bucket
+
+Resources:
+  s3Bucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: s3-cloudformation-manish
+      Tags:
+        - Key: course
+          Value: cloudformation
