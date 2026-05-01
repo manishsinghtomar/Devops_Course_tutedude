@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fenrir
+spec:
+  selector:
+    app: fenrir
+  ports:
+    - port: 5000
+      targetPort: 8000

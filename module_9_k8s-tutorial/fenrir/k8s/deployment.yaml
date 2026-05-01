@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fenrir
+  labels:
+    desc: fenrir-app-deployment
+spec:
+  selector:
+    matchLabels:
+      app: fenrir
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: fenrir
+    spec:
+      containers:
+      - name: fenrir-main
+        image: docker.io/manishtomar82/environment-variables:latest
+        ports:
+        - containerPort: 8000

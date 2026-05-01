@@ -1,0 +1,64 @@
+k8s - container orchestration tool Features:
+
+- Deployment
+- Manage 
+- Scale 
+- Update 
+- Rollback
+- Health 
+- Logs
+- Exec
+- Port Forward
+- Proxy
+- Label
+- Secure
+- Load Balance
+
+K8s Components
+
+- Node = VM or Physical Machine
+- Pod = container
+- Deployment = Pod Template
+- StatefulSet = Pod Template
+- Service = Load Balancer
+- Ingress = Routing
+- ConfigMap = Configuration
+- Secret = Secret
+- PersistentVolume = Storage
+- PersistentVolumeClaim = Storage
+
+- Replication Controller = Deployment
+- storageclasses
+- daemonset
+- job 
+- ns 
+- crd
+
+
+K8s Architecture
+
+- Master Node
+    - API Server
+    - Scheduler
+    - Controller Manager
+    - etcd
+
+- Worker Node
+    - Kubelet
+    - Kube Proxy
+    - Container Runtime (Docker, containerd)
+    
+Minikube:
+
+- Minikube is a tool that makes it easy to run kubernetes locally
+- kind is like Minikube , two less features, it does not support Ingress and Dashboard.
+
+Kubectl:
+
+- Kubectl is a command line tool for controlling kubernetes clusters.
+- Kubens = switch between namespaces
+- Kubectx = switch between clusters
+
+starting Minikube:
+ 
+- minikube start 

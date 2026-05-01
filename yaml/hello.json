@@ -1,0 +1,33 @@
+{
+  "1": "this is manish's roll number",
+  "apple": "I am a red fruit"
+}
+
+[
+  "apple",
+  "mango",
+  "banana",
+  "Apple"
+]
+
+{
+  "cities": [
+    "new delhi",
+    "mumbai",
+    "gujrat",
+    "rajasthan"
+  ]
+}
+
+{
+  "cities": [
+    "new delhi",
+    "mumbai",
+    "gujrat"
+  ]
+}
+
+{
+  "mango": "yellow fruit",
+  "age": 56
+}
